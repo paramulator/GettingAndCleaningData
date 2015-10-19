@@ -1,32 +1,42 @@
 Introduction
 
 Project Background
-
+  Study design
+  
 Tidy data principles
   Struction of output is *WIDE*
-
+  
 Source Data
-  Source files - what are they 
+  Source files - where they are, what is there 
   Data structure
-  Variable naming scheme
+  Variable labels 
   Known issues
+    some name components duplicated
+    no key to join data together between subjects, activities, and features
 
 Target Data
+  Summary measures
+  Included / Excluded values
   Structure
   Number of variables
+    Grouping varibles
+    Feature vribles
   Number of rows
   Variable naming scheme
   Transformations
-  Known issues   
+  Known issues  
 
 Program Logic converting source to target
   Flowchart
   High level steps
   Diagram showing how files are related
+
+Code to read target data
   
-Data Dictionary
+Code Book
   Variable Name
   Format
+  unit of measure
   Description
   Valid Range
   Code for Missing
