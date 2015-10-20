@@ -36,6 +36,11 @@ Code to read target data
 Code Book
   Variable Name
   Format
+    Continuous
+    Ordinal
+    Categorical
+    Missing
+    Censored
   unit of measure
   Description
   Valid Range
