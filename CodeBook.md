@@ -9,6 +9,7 @@ Tidy data principles
   Each different observation of that variable should be in a different row
   There should be one table for each "kind" of variable
   If you have multiple tables, they should include a column in the table that allows them to be linked
+  Always encode every piece of information about your observations using text.
   Some other important tips
     Include a row at the top of each file with variable names.
     Make variable names human readable AgeAtDiagnosis instead of AgeDx
