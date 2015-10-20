@@ -35,10 +35,6 @@ Target Data
   Variable naming scheme
   Transformations
   Known issues  
-
-
-
-Code to read target data
   
 Code Book
   Variable Name
@@ -54,9 +50,7 @@ Code Book
   Code for Missing
   Transformations
 
-References
-  Tidy data by HW
-  Tidy data slides
-  Reference to course notes about this project
-  
+Code to read target data
+
+
   
