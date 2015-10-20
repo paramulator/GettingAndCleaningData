@@ -36,10 +36,7 @@ Target Data
   Transformations
   Known issues  
 
-Program Logic converting source to target
-  Flowchart
-  High level steps
-  Diagram showing how files are related
+
 
 Code to read target data
   
