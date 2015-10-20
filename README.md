@@ -20,4 +20,10 @@ Step 2 - run the software separately for each sample
 Step 3 - take column three of outputfile.out for each sample and that is the corresponding row in the output data set
 https://github.com/jtleek/datasharing
 
+References
+  Tidy data by HW
+  Tidy data slides
+  Reference to course notes about this project
+  
+
 You should also include information about which system (Mac/Windows/Linux) you used the software on and whether you tried it more than once to confirm it gave the same results. Ideally, you will run this by a fellow student/labmate to confirm that they can obtain the same output file you did.
