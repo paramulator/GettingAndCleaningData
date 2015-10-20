@@ -14,6 +14,37 @@ Program Logic converting source to target
   Flowchart
   High level steps
   Diagram showing how files are related
+  # 
+# Logical steps -------------------------------------------------------------
+# 
+# The steps for putting together a tidy dataset differ slightly from the steps
+# outlined in the assignment.  The following approach constructs tidy data
+# at intermediate steps before putting the "train" and "test" data together.
+# This approach is slightly more efficent and gives the same net result.  It is
+# more efficient because unnecessary columns are dropped before "train" and 
+# "test" are concatenated thus reducing storage requirements. 
+#       
+# Step 1.  Read the reference data files and produce individual dataframes for 
+#          each.  As needed, a number of improvements are made to the "features" 
+#          dataframe so that feature labels contained in the dataframe
+#          can be used as proper R variable names that adhere to tidy
+#          data principles.  The details are outlined below in the code.
+# Step 2.  Read the training data and produce a training dataframe that adheres
+#          to the principles of tidy data.  This step leverages the "features"
+#          reference dataframe to construct meaningful column names.  It also
+#          references the "activities" dataframe to give meaningful labels
+#          to raw human activitiy IDs.
+# Step 3.  Read the test data and produce a second dataframe, using the same
+#          methods as Step 2.
+# Step 4.  Once the training and test dataframes are constructed, concatenate 
+#          these together to form a single, longer dataframe.
+# Step 5.  Group the concatenated data by human subject id and activity label, 
+#          and summarize it by finding the mean of each feature variable within 
+#          each subject and activity combination.
+# Step 6.  Export the summarized data to a text file in the current working 
+#          directory.
+#==========================================================================
+
 
 Step 1 - take the raw file, run version 3.1.2 of summarize software with parameters a=1, b=2, c=3
 Step 2 - run the software separately for each sample
