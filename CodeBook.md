@@ -19,6 +19,20 @@ Tidy data principles
 Source Data
   Source files - where they are, what is there 
   Data structure
+  # Structure of source data ------------------------------------------------
+# 
+# Source data files are broken down into several broad categories:
+#   - Reference data
+#       - A list of all human activities recorded in the data
+#       - A list of all features recorded in the data
+#   - Training data
+#       - Specific human subjects included in the training data 
+#       - Specific activities recorded in the training data
+#       - Specific features recorded in the training data
+#   - Test data
+#       - Specific human subjects included in the test data 
+#       - Specific activities recorded in the test data
+#       - Specific features recorded in the test data
   Variable labels 
   Known issues
     some name components duplicated
