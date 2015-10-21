@@ -6,9 +6,17 @@ File            | Description
 ----------------|---------------------------------------------------------------------
 README.md       | This document
 Codebook.md     | Detailed description of data source, variables, and transformations
-run_analysis.R  | Script to read raw data and produce a tidy dataset
+run_analysis.R  | R script to read source data and produce a tidy dataset
 
-Script logic
+### Contents of this document
+* Data processing flow
+* Script inputs
+* Script outputs
+* Script logic
+* Tidy data and variable naming references
+
+
+
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
 The input for the script is the raw data
@@ -16,11 +24,7 @@ The output is the processed, tidy data
 There are no parameters to the script
 In some cases it will not be possible to script every step. In that case you should provide instructions like:
 
-Program Logic converting source to target
-  Flowchart
-  High level steps
-  Diagram showing how files are related
-  # 
+
 # Logical steps -------------------------------------------------------------
 # 
 # The steps for putting together a tidy dataset differ slightly from the steps
