@@ -1,8 +1,14 @@
-# GettingAndCleaningData
+### GettingAndCleaningData
 Repo for the Getting and Cleaning Data class project 
+***
+### Contents of repo
+File            | Description
+----------------|---------------------------------------------------------------------
+README.md       | This document
+Codebook.md     | Detailed description of data source, variables, and transformations
+run_analysis.R  | Script to read raw data and produce a tidy dataset
 
-exact recipe from source to target
-
+Script logic
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
 The input for the script is the raw data
