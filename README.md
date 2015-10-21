@@ -52,10 +52,11 @@ run_analysis.R  | R script to read source data and produce a tidy dataset
  Rcpp |         0.12.1 |  2015-09-10 CRAN (R 3.2.2)
 
 #### Useful links regarding tidy data and variable naming references
-* Getting and sharing data repo: https://github.com/jtleek/datasharing
+* Tidy data course notes for this class: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
+* How to share data with a statistician: https://github.com/jtleek/datasharing
 * The Elements of Data Analytic Style: https://leanpub.com/datastyle
-* Hadley Wickham's paper on tidy data: [] ()
-* Extensive staff notes document: [] ()
+* Hadley Wickham's paper on tidy data: http://vita.had.co.nz/papers/tidy-data.pdf
+* 18 months of CTA advice for this class: https://thoughtfulbloke.wordpress.com/2015/08/31/hello-world
 
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
