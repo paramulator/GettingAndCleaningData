@@ -1,20 +1,21 @@
 #### GettingAndCleaningData
-Repo for the Coursera Getting and Cleaning Data class project 
+Repo for the Coursera Getting and Cleaning Data class project.  This project involves reading multiple source data files from the wearable computing project and then transforming it all into a single tidy dataset.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a full description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the Codebook.md file contained in this repo for details about the source data and the resulting tidy data. 
 ***
 #### Contents of repo
 File            | Description
 ----------------|---------------------------------------------------------------------
-README.md       | This document
-Codebook.md     | Detailed description of data source, variables, and transformations
+README.md       | Detailed logic for creating the tidy dataset, and related info.
+Codebook.md     | Detailed description of source data, transformations, and resulting tidy data.
 run_analysis.R  | R script to read source data and produce a tidy dataset
 
 #### Contents of this document
 * Data processing flow
-* Script inputs
-* Script outputs
-* Script logic
+* R script inputs
+* R script outputs
+* R script logic
 * Software version
-* Useful links
+* Packages
+* Some useful links
 
 #### Data processing flow
 
