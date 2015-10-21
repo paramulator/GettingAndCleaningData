@@ -1,21 +1,37 @@
-### GettingAndCleaningData
-Repo for the Getting and Cleaning Data class project 
+#### GettingAndCleaningData
+Repo for the Coursera Getting and Cleaning Data class project 
 ***
-### Contents of repo
+#### Contents of repo
 File            | Description
 ----------------|---------------------------------------------------------------------
 README.md       | This document
 Codebook.md     | Detailed description of data source, variables, and transformations
 run_analysis.R  | R script to read source data and produce a tidy dataset
 
-### Contents of this document
+#### Contents of this document
 * Data processing flow
 * Script inputs
 * Script outputs
 * Script logic
-* Tidy data and variable naming references
+* Software version
+* Useful links
+
+#### Data processing flow
+
+#### R script inputs
+
+#### R script outputs
+
+#### R script detailed logic
+
+#### Software version
 
 
+#### Usefule links regarding tidy data and variable naming references
+* Getting and sharing data repo: https://github.com/jtleek/datasharing
+* The Elements of Data Analytic Style: https://leanpub.com/datastyle
+* Hadley Wickham's paper on tidy data: [] ()
+* Extensive staff notes document: [] ()
 
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
