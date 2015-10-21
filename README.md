@@ -24,31 +24,34 @@ run_analysis.R  | R script to read source data and produce a tidy dataset
 
 #### R script detailed logic
 
-#### Software version
-Session info --------------------------------------------------------------------------------------------------------------
- setting  value                       
- version  R version 3.2.1 (2015-06-18)
- system   x86_64, mingw32             
- ui       RStudio (0.99.484)          
- language (EN)                        
- collate  English_United States.1252  
- tz       America/Chicago             
- date     2015-10-21                  
+#### Session Info
 
-Packages -------------------------------------------------------------------------------------------------------------------
- package    * version date       source        
- assertthat   0.1     2013-12-06 CRAN (R 3.2.1)
- DBI          0.3.1   2014-09-24 CRAN (R 3.2.1)
- devtools   * 1.9.1   2015-09-11 CRAN (R 3.2.2)
- digest       0.6.8   2014-12-31 CRAN (R 3.2.1)
- dplyr      * 0.4.3   2015-09-01 CRAN (R 3.2.2)
- lazyeval     0.1.10  2015-01-02 CRAN (R 3.2.1)
- magrittr     1.5     2014-11-22 CRAN (R 3.2.1)
- memoise      0.2.1   2014-04-22 CRAN (R 3.2.1)
- R6           2.1.1   2015-08-19 CRAN (R 3.2.2)
- Rcpp         0.12.1  2015-09-10 CRAN (R 3.2.2)
+ setting | value
+ --------|--------------------------------
+ version | R version 3.2.1 (2015-06-18)
+ system  | x86_64, mingw32             
+ ui      | RStudio (0.99.484)          
+ language | (EN)                        
+ collate  | English_United States.1252  
+ tz       | America/Chicago             
+ date     | 2015-10-21                  
 
-#### Usefule links regarding tidy data and variable naming references
+#### Packages 
+
+ package |    * version date|       source 
+ --------|------------------|------------------
+ assertthat |   0.1 |     2013-12-06 CRAN (R 3.2.1)
+ DBI |          0.3.1 |   2014-09-24 CRAN (R 3.2.1)
+ devtools |   * 1.9.1 |   2015-09-11 CRAN (R 3.2.2)
+ digest |       0.6.8 |   2014-12-31 CRAN (R 3.2.1)
+ dplyr |      * 0.4.3 |   2015-09-01 CRAN (R 3.2.2)
+ lazyeval |     0.1.10 |  2015-01-02 CRAN (R 3.2.1)
+ magrittr |     1.5 |     2014-11-22 CRAN (R 3.2.1)
+ memoise |      0.2.1 |   2014-04-22 CRAN (R 3.2.1)
+ R6 |           2.1.1 |   2015-08-19 CRAN (R 3.2.2)
+ Rcpp |         0.12.1 |  2015-09-10 CRAN (R 3.2.2)
+
+#### Useful links regarding tidy data and variable naming references
 * Getting and sharing data repo: https://github.com/jtleek/datasharing
 * The Elements of Data Analytic Style: https://leanpub.com/datastyle
 * Hadley Wickham's paper on tidy data: [] ()
