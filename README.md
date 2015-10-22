@@ -1,5 +1,5 @@
 #### GettingAndCleaningData
-Repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project and then transforming it all into a single tidy dataset.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a full description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for details about the source data and the resulting tidy data. 
+This is the repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project by Anguita et al. 2013, and then transforming it all into a single tidy dataset.  The project centered on collection of human activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
 ***
 
 
@@ -11,6 +11,7 @@ Repo for the Coursera *Getting and Cleaning Data* class project.  This project i
 * Session info
 * Packages
 * Some useful links
+* Citation
 
 #### Data processing flow
 
@@ -40,11 +41,14 @@ Repo for the Coursera *Getting and Cleaning Data* class project.  This project i
 
 
 #### Useful links regarding tidy data and variable naming references
-* Tidy data course notes for this class: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
+* Tidy data course notes: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
 * How to share data with a statistician: https://github.com/jtleek/datasharing
 * The Elements of Data Analytic Style: https://leanpub.com/datastyle
 * Hadley Wickham's paper on tidy data: http://vita.had.co.nz/papers/tidy-data.pdf
 * 18 months of CTA advice for this class: https://thoughtfulbloke.wordpress.com/2015/08/31/hello-world
+
+#### Citation
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
