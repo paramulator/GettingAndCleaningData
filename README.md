@@ -6,10 +6,10 @@ The wearable computing project involved the collection of activity-related data 
 
 #### Contents of this document
 * Instructions for running the script
-* Data processing flow
-* R script inputs
-* R script outputs
-* R script logic
+* R script 
+    +   inputs
+    +   outputs
+    +   logic
 * Session info
 * Packages
 * Some useful links
@@ -31,9 +31,8 @@ The wearable computing project involved the collection of activity-related data 
 
 ***
 
-#### Data processing flow
-
-##### R script inputs
+#### R script 
+##### Inputs
 There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
 
 The raw source data are downloaded from this location:
@@ -58,10 +57,10 @@ File/Folder | Brief Description
 
  
 
-##### R script outputs
+##### Outputs
 A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt". 
 
-##### R script logic overview
+##### Logic overview
 * Step 0
   + Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
   + If the folder does not exist, download the external data as a zip file and unzip it into the "UCI HAR Dataset" folder.
