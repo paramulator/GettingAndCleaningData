@@ -14,33 +14,42 @@ The wearable computing project involved the collection of activity-related data 
 * Some useful links
 * Citation
 
+***
+#### Instructions
+1.  Simply execute the script "[run_analysis.R] ()".
+  + the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, it is created and populated with the source data files and folders.
+
 #### Data processing flow
 
-#### R script inputs
-There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded.  That said, the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, it is created and populated with the source data files and folders.
+##### R script inputs
+There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded.  That said, 
 
 The raw source data are downloaded from this location:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The structure of the folder and relevant input/output files is as follows:
-* *UCI HAR Dataset* --- root folder for all source data
-  + *features.txt* --- feature IDs and labels
-  + *activity_labels.txt* --- activity IDs and labels
-  + *test* --- test subset folder
-    + *subject_test.txt* --- list of subjects
-    + *y_test.txt* --- list of activities
-    + *X_test.txt* --- list of features
-  + *train* --- train subset folder
-    + *subject_train.txt* --- list of subjects
-    + *y_train.txt* --- list of activities
-    + *X_train.txt* --- list of features
-  + *courseProjectStep5.txt* --- the generated tidy dataset
+The structure of the UCI folder and relevant input/output files is as follows:
+
+File/Folder | Brief Description
+------------|--------------------
+**/UCI HAR Dataset** |root folder for all source data
+  features.txt | feature IDs and labels
+  activity_labels.txt | activity IDs and labels
+  courseProjectStep5.txt | the generated tidy dataset
+  **/UCI HAR Dataset/test** | test subset folder
+    subject_test.txt | list of subjects
+    y_test.txt | list of activities
+    X_test.txt | list of features
+  **/UCI HAR Dataset/train** | train subset folder
+    subject_train.txt | list of subjects
+    y_train.txt | list of activities
+    X_train.txt | list of features
+
  
 
-#### R script outputs
+##### R script outputs
 A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt". 
 
-#### R script detailed logic
+##### R script logic overview
 * Step 0
   + Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
   + If the folder does not exist, download the external data as a zip file and unzip it into the "UCI HAR Dataset" folder.
@@ -52,6 +61,8 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
 * Step 4
 * Step 5
 * Validation
+
+***
 
 #### Session Info
 
@@ -71,6 +82,7 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
  --------|------------------|------------------
  dplyr |      * 0.4.3 |   2015-09-01 CRAN (R 3.2.2)
 
+***
 
 #### Useful links regarding tidy data and variable naming references
 * Tidy data course notes: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
@@ -81,6 +93,8 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
 
 #### Citation
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+***
 
 The instruction list
 Ideally a computer script (in R :-), but I suppose Python is ok too...)
@@ -126,10 +140,7 @@ Step 2 - run the software separately for each sample
 Step 3 - take column three of outputfile.out for each sample and that is the corresponding row in the output data set
 https://github.com/jtleek/datasharing
 
-References
-  Tidy data by HW
-  Tidy data slides
-  Reference to course notes about this project
+
   
 
-You should also include information about which system (Mac/Windows/Linux) you used the software on and whether you tried it more than once to confirm it gave the same results. Ideally, you will run this by a fellow student/labmate to confirm that they can obtain the same output file you did.
+
