@@ -13,7 +13,7 @@ run_analysis.R  | R script to read source data and produce a tidy dataset
 * R script inputs
 * R script outputs
 * R script logic
-* Software version
+* Session info
 * Packages
 * Some useful links
 
