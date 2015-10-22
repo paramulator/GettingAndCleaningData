@@ -22,19 +22,19 @@ There are no parameterized inputs to the R script.  Instead, all references to e
 The raw source data are downloaded from this location:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-The structure of the folder and relevant files is as follows:
-* UCI HAR Dataset
-  + features.txt
-  + activity_labels.txt
-  + test
-    + subject_test.txt
-    + y_test.txt
-    + X_test.txt
-  + train
-    + subject_train.txt
-    + y_train.txt
-    + X_train.txt
-  
+The structure of the folder and relevant input/output files is as follows:
+* *UCI HAR Dataset* --- root folder for all source data
+  + *features.txt* --- feature IDs and labels
+  + *activity_labels.txt* --- activity IDs and labels
+  + *test* --- test subset folder
+    + *subject_test.txt* --- list of subjects
+    + *y_test.txt* --- list of activities
+    + *X_test.txt* --- list of features
+  + *train* --- train subset folder
+    + *subject_train.txt* --- list of subjects
+    + *y_train.txt* --- list of activities
+    + *X_train.txt* --- list of features
+  + *courseProjectStep5.txt* --- the generated tidy dataset
  
 
 #### R script outputs
