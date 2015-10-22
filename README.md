@@ -62,7 +62,7 @@ File/Folder | Brief Description
 <br>
 
 ##### Outputs
-A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt".
+A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt" and will have a column header row, 180 data rows, and 66 columns.  The first two columns indicate subject ID and activity label.  The remaining columns are means of 64 specific feature variables. 
 
 <br>  
 
