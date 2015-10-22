@@ -1,7 +1,8 @@
 #### GettingAndCleaningData
-This is the repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project by Anguita et al. 2013, and then transforming it all into a single tidy dataset.  The project centered on collection of human activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
-***
+This is the repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project by Anguita et al. 2013, and then transforming it all into a single tidy dataset.  R is used for all data processing activities.  
 
+The wearable computing project involved the collection of activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone worn by test subjects.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
+***
 
 #### Contents of this document
 * Data processing flow
@@ -16,10 +17,41 @@ This is the repo for the Coursera *Getting and Cleaning Data* class project.  Th
 #### Data processing flow
 
 #### R script inputs
+There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded.  That said, the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, it is created and populated with the source data files and folders.
+
+The raw source data are downloaded from this location:
+  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+The structure of the folder and relevant files is as follows:
+* UCI HAR Dataset
+  + features.txt
+  + activity_labels.txt
+  + test
+    + subject_test.txt
+    + y_test.txt
+    + X_test.txt
+  + train
+    + subject_train.txt
+    + y_train.txt
+    + X_train.txt
+  
+ 
 
 #### R script outputs
+A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt". 
 
 #### R script detailed logic
+* Step 0
+  + Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
+  + If the folder does not exist, download the external data as a zip file and unzip it into the "UCI HAR Dataset" folder.
+  + If a text file called "courseProjectStep5.txt" exists in the UCI folder, remove it.
+* Step 1
+  + Read the reference data files for activities and features.  Features are given descriptive labels and need to be cleaned up before they can be used as valid variable names.  This is handled in this step. 
+* Step 2
+* Step 3
+* Step 4
+* Step 5
+* Validation
 
 #### Session Info
 
