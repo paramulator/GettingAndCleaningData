@@ -34,6 +34,8 @@ The wearable computing project involved the collection of activity-related data 
 ***
 
 #### R script   
+The script is [here] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R)
+
 ##### Inputs
 There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
 
