@@ -3,7 +3,6 @@ This is the repo for the Coursera *Getting and Cleaning Data* class project.  Th
 
 The wearable computing project involved the collection of activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone worn by test subjects.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
 ***
-<br>
 #### Contents of this document
 * Instructions for running the script
 * R script 
@@ -16,7 +15,6 @@ The wearable computing project involved the collection of activity-related data 
 * Citation
 
 ***
-<br>
 #### Instructions for running the script
 1.  Start an R session.
 2.  Execute "library(dplyr)"...  Execute "install.package('dplyr')" first if necessary.
@@ -29,9 +27,7 @@ The wearable computing project involved the collection of activity-related data 
     + Execute the following to read the file into an R dataframe:
         + testFrame <- read.table("UCI HAR Dataset//courseProjectStep5.txt", header = TRUE)
 6.  Reference the [CodeBook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) for details about the contents of the tidy dataset.
-
 ***
-<br>
 #### R script   
 ##### Inputs
 There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
@@ -58,8 +54,7 @@ File/Folder | Brief Description
 
 <br>
 ##### Outputs
-A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt". 
-
+A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt".
 <br>     
 ##### Logic overview
 * Step 0
@@ -73,9 +68,7 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
 * Step 4
 * Step 5
 * Validation
-
 ***
-<br>
 #### Session Info
 The state of the R environment during script development and testing:
 
@@ -98,7 +91,6 @@ Packages that were loaded to enable tidy data manipulations:
  dplyr |      * 0.4.3 |   2015-09-01 CRAN (R 3.2.2)
 
 ***
-<br>
 #### Useful links regarding tidy data and variable naming references
 * Tidy data course notes: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
 * How to share data with a statistician: https://github.com/jtleek/datasharing
