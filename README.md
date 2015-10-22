@@ -1,10 +1,11 @@
 #### GettingAndCleaningData
-This is the repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project by Anguita et al. 2013, and then transforming it all into a single tidy dataset.  R is used for all data processing activities.  
+This is the repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project by Anguita et al., 2013, and then transforming it all into a single tidy dataset.  R is used for all data processing activities.  
 
 The wearable computing project involved the collection of activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone worn by test subjects.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
 ***
 
 #### Contents of this document
+* Instructions for running the script
 * Data processing flow
 * R script inputs
 * R script outputs
@@ -15,13 +16,18 @@ The wearable computing project involved the collection of activity-related data 
 * Citation
 
 ***
-#### Instructions
-1.  Load the "dplyr" package.
-2.  Simply execute the script [run_analysis.R] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R).
+#### Instructions for running the script
+1.  Start an R session.
+2.  Execute "library(dplyr)"...  Execute "install.package('dplyr')" first if necessary.
+3.  In case the "UCI Har Dataset" folder already exists (because you've already manually downloaded the data), set your working directory to the parent of the UCI folder.
+    + If this folder does not exist go to step 3.
+4.  Execute the script [run_analysis.R] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R).
   + the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, the script will create it and populate it with the source data files and folders.
   + An internet connection will be required to download data.
-3.  Locate the file "courseProjectStep5.txt" in the "UCI HAR Dataset" folder.  This is the tidy dataset created from the inputs.
-4.  Reference the [CodeBook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) for details about the contents of the tidy dataset.
+5.  After the script completes locate the file "courseProjectStep5.txt" in the "UCI HAR Dataset" folder.  This is the tidy dataset created from the inputs.
+    + Execute the following to read the file into an R dataframe:
+        + testFrame <- read.table("UCI HAR Dataset//courseProjectStep5.txt", header = TRUE)
+6.  Reference the [CodeBook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) for details about the contents of the tidy dataset.
 
 ***
 
