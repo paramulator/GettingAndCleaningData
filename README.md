@@ -16,13 +16,19 @@ The wearable computing project involved the collection of activity-related data 
 
 ***
 #### Instructions
-1.  Simply execute the script "[run_analysis.R] ()".
-  + the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, it is created and populated with the source data files and folders.
+1.  Load the "dplyr" package.
+2.  Simply execute the script [run_analysis.R] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R).
+  + the script is expecting to find a folder in the current working directory of the R session called "UCI HAR Dataset".  All sub-folders and files are expected to be found here.  If the "UCI HAR Dataset" folder does not exist, the script will create it and populate it with the source data files and folders.
+  + An internet connection will be required to download data.
+3.  Locate the file "courseProjectStep5.txt" in the "UCI HAR Dataset" folder.  This is the tidy dataset created from the inputs.
+4.  Reference the [CodeBook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) for details about the contents of the tidy dataset.
+
+***
 
 #### Data processing flow
 
 ##### R script inputs
-There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded.  That said, 
+There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
 
 The raw source data are downloaded from this location:
   https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
