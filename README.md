@@ -3,19 +3,20 @@ This is the repo for the Coursera *Getting and Cleaning Data* class project.  Th
 
 The wearable computing project involved the collection of activity-related data generated via the built-in gyro and accelerometer of a Samsung smartphone worn by test subjects.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the [Codebook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) file contained in this repo for more details about the source data and the resulting tidy dataset. 
 ***
-
+<br>
 #### Contents of this document
 * Instructions for running the script
 * R script 
-    +   inputs
-    +   outputs
-    +   logic
+    +   Inputs
+    +   Outputs
+    +   Logic overview
 * Session info
 * Packages
 * Some useful links
 * Citation
 
 ***
+<br>
 #### Instructions for running the script
 1.  Start an R session.
 2.  Execute "library(dplyr)"...  Execute "install.package('dplyr')" first if necessary.
@@ -30,7 +31,7 @@ The wearable computing project involved the collection of activity-related data 
 6.  Reference the [CodeBook.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md) for details about the contents of the tidy dataset.
 
 ***
-
+<br>
 #### R script   
 ##### Inputs
 There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
@@ -55,11 +56,11 @@ File/Folder | Brief Description
     y_train.txt | list of activities
     X_train.txt | list of features  
 
- 
-
+<br>
 ##### Outputs
 A single **WIDE format** tidy dataset is generated as a text file and is placed in the "UCI HAR Dataset" folder.  The text file is called "courseProjectStep5.txt". 
 
+<br>     
 ##### Logic overview
 * Step 0
   + Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
@@ -74,8 +75,9 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
 * Validation
 
 ***
-
+<br>
 #### Session Info
+The state of the R environment during script development and testing:
 
  setting | value
  --------|--------------------------------
@@ -87,21 +89,23 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
  tz       | America/Chicago             
  date     | 2015-10-21                  
 
+<br>
 #### Packages 
+Packages that were loaded to enable tidy data manipulations:
 
  package |    * version date|       source 
  --------|------------------|------------------
  dplyr |      * 0.4.3 |   2015-09-01 CRAN (R 3.2.2)
 
 ***
-
+<br>
 #### Useful links regarding tidy data and variable naming references
 * Tidy data course notes: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
 * How to share data with a statistician: https://github.com/jtleek/datasharing
 * The Elements of Data Analytic Style: https://leanpub.com/datastyle
 * Hadley Wickham's paper on tidy data: http://vita.had.co.nz/papers/tidy-data.pdf
 * 18 months of CTA advice for this class: https://thoughtfulbloke.wordpress.com/2015/08/31/hello-world
-
+<br>
 #### Citation
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
