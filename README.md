@@ -31,7 +31,7 @@ The wearable computing project involved the collection of activity-related data 
 
 ***
 
-#### R script 
+#### R script   
 ##### Inputs
 There are no parameterized inputs to the R script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
 
@@ -53,7 +53,7 @@ File/Folder | Brief Description
   **/UCI HAR Dataset/train** | train subset folder
     subject_train.txt | list of subjects
     y_train.txt | list of activities
-    X_train.txt | list of features
+    X_train.txt | list of features  
 
  
 
