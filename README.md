@@ -36,16 +36,8 @@ Repo for the Coursera *Getting and Cleaning Data* class project.  This project i
 
  package |    * version date|       source 
  --------|------------------|------------------
- assertthat |   0.1 |     2013-12-06 CRAN (R 3.2.1)
- DBI |          0.3.1 |   2014-09-24 CRAN (R 3.2.1)
- devtools |   * 1.9.1 |   2015-09-11 CRAN (R 3.2.2)
- digest |       0.6.8 |   2014-12-31 CRAN (R 3.2.1)
  dplyr |      * 0.4.3 |   2015-09-01 CRAN (R 3.2.2)
- lazyeval |     0.1.10 |  2015-01-02 CRAN (R 3.2.1)
- magrittr |     1.5 |     2014-11-22 CRAN (R 3.2.1)
- memoise |      0.2.1 |   2014-04-22 CRAN (R 3.2.1)
- R6 |           2.1.1 |   2015-08-19 CRAN (R 3.2.2)
- Rcpp |         0.12.1 |  2015-09-10 CRAN (R 3.2.2)
+
 
 #### Useful links regarding tidy data and variable naming references
 * Tidy data course notes for this class: http://jtleek.github.io/modules/03_GettingData/01_03_componentsOfTidyData
