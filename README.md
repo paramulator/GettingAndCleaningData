@@ -92,7 +92,7 @@ The state of the R environment during script development and testing:
  tz       | America/Chicago             
  date     | 2015-10-21                  
 
-<br>
+***
 
 #### Packages 
 Packages that were loaded to enable tidy data manipulations:
@@ -110,7 +110,7 @@ Packages that were loaded to enable tidy data manipulations:
 * Hadley Wickham's paper on tidy data: http://vita.had.co.nz/papers/tidy-data.pdf
 * 18 months of CTA advice for this class: https://thoughtfulbloke.wordpress.com/2015/08/31/hello-world
 
-<br>
+***
 
 #### Citation
 Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
