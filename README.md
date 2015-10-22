@@ -1,5 +1,5 @@
 #### GettingAndCleaningData
-Repo for the Coursera Getting and Cleaning Data class project.  This project involves reading multiple source data files from the wearable computing project and then transforming it all into a single tidy dataset.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a full description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the Codebook.md file contained in this repo for details about the source data and the resulting tidy data. 
+Repo for the Coursera *Getting and Cleaning Data* class project.  This project involves reading multiple source data files from the wearable computing project and then transforming it all into a single tidy dataset.  A reference to wearable computing is [here](http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand) and a full description of the raw source data is [here](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).  See also the Codebook.md file contained in this repo for details about the source data and the resulting tidy data. 
 ***
 #### Contents of repo
 File            | Description
