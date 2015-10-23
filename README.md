@@ -68,23 +68,16 @@ Each data row represents an observation on each combination of 30 human subjects
 <br>  
 
 ##### Logic overview
-* Step 0
-    + Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
+0. Establish pointers to the external data and each of the required files in the "UCI HAR Dataset" folder.
     + If the folder does not exist, download the external data as a zip file and unzip it into the "UCI HAR Dataset" folder.
     + If a text file called "courseProjectStep5.txt" exists in the UCI folder, remove it.
-* Step 1
-    + Read the reference data files for features and activites.  Features were given descriptive labels and need to be cleaned up before they can be used as valid variable names.   
-* Step 2
-    + Process the 3 files in the test folder by reading them, column-bind them, and subsetting the columns down to just those features that represent means and standard deviations of the raw time interval data.  The result will be a tidy dataset with one variable per column and one observation per row.  Do the same for the 3 files in the train folder.    
-* Step 3
-    + Row-bind the test and train tidy datasets together into a single dataset.
-* Step 4
-    + Group the data by subject ID and activity label, and compute the mean value of each feature variable. 
-* Step 5
-    + Write the summarized data to "courseProjectStep5.txt" file in the UCI folder. 
-* Validation
-    + The text file can be read by executing:
-        + `testFrame <- read.table("UCI HAR Dataset//courseProjectStep5.txt", header = TRUE)` 
+1. Read the reference data files for features and activites.  Features were given descriptive labels and need to be cleaned up before they can be used as valid variable names.   
+2. Process the 3 files in the test folder by reading them, column-bind them, and subsetting the columns down to just those features that represent means and standard deviations of the raw time interval data.  The result will be a tidy dataset with one variable per column and one observation per row.  Do the same for the 3 files in the train folder.    
+3. Row-bind the test and train tidy datasets together into a single dataset.
+4. Group the data by subject ID and activity label, and compute the mean value of each feature variable. 
+5. Write the summarized data to "courseProjectStep5.txt" file in the UCI folder. 
+6. Validation: the text file can be read by executing:
+    + `testFrame <- read.table("UCI HAR Dataset//courseProjectStep5.txt", header = TRUE)` 
 
 ***
 
