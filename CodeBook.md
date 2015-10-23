@@ -18,7 +18,7 @@ You are in the repo for the Coursera *Getting and Cleaning Data* class project. 
 #### References to source data
 This [link] (http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) describes the source data in a bit more detail than does the project link.  In particular it explains how magnitudes were calculate using the x, y, and z axis signals, how all of the features have been rescaled to fall in the interval [-1, 1], how to interpret the mean and standard deviation calculations that were performed, and what the units of measure are for each feature.  
 
-There is an additional features_info.txt file contained in the source data that gives even more detail individual feature calculations.
+There is an additional [features_info.txt] (https://github.com/paramulator/GettingAndCleaningData/blob/master/UCI%20HAR%20Dataset/features_info.txt) file contained in the source data that gives even more detail individual feature calculations.
 
 ***
 
