@@ -8,11 +8,11 @@ A reference to wearable computing is [here](http://www.insideactivitytracking.co
 ***
 
 #### Contents of this document
-* Instructions for running the script
-* R script details 
+* Instructions for running the R script
+* Script details 
     +   Inputs
     +   Outputs
-    +   Logic overview
+    +   Logic
 * Dev environment
 * Package dependency
 * Some useful links
@@ -20,7 +20,7 @@ A reference to wearable computing is [here](http://www.insideactivitytracking.co
 
 ***
 
-#### Instructions for running the script
+#### Instructions for running the R script
 1.  Start an R session.
 2.  Execute "library(dplyr)"...  Execute "install.package('dplyr')" first if necessary.
 3.  In case the "UCI Har Dataset" folder already exists (because you've already manually downloaded the data), set your working directory to the parent of the UCI folder.
@@ -35,7 +35,7 @@ A reference to wearable computing is [here](http://www.insideactivitytracking.co
 
 ***
 
-#### R script details   
+#### Script details   
 The script is [here] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R)
 
 ##### Inputs
