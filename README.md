@@ -9,12 +9,12 @@ A reference to wearable computing is [here](http://www.insideactivitytracking.co
 
 #### Contents of this document
 * Instructions for running the script
-* R script 
+* R script details 
     +   Inputs
     +   Outputs
     +   Logic overview
-* Session info
-* Packages
+* Dev environment
+* Package dependency
 * Some useful links
 * Citation
 
@@ -35,7 +35,7 @@ A reference to wearable computing is [here](http://www.insideactivitytracking.co
 
 ***
 
-#### R script   
+#### R script details   
 The script is [here] (https://github.com/paramulator/GettingAndCleaningData/blob/master/run_analysis.R)
 
 ##### Inputs
@@ -85,7 +85,7 @@ A single **WIDE format** tidy dataset is generated as a text file and is placed 
 
 ***
 
-#### Session Info
+#### Dev environment
 The state of the R environment during script development and testing:
 
  setting | value
@@ -100,7 +100,7 @@ The state of the R environment during script development and testing:
 
 ***
 
-#### Packages 
+#### Package dependency 
 Packages that were loaded to enable tidy data manipulations:
 
  package |    * version date|       source 
