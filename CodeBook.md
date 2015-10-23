@@ -1,70 +1,83 @@
-Introduction
+This document describes the source data, the final tidy dataset, and the transformations required to make the source tidy.
 
-Project Background
-  Study design
-  
-Tidy data principles
-  Struction of output is *WIDE*
-  Each variable you measure should be in one column
-  Each different observation of that variable should be in a different row
-  There should be one table for each "kind" of variable
-  If you have multiple tables, they should include a column in the table that allows them to be linked
-  Always encode every piece of information about your observations using text.
-  Some other important tips
-    Include a row at the top of each file with variable names.
-    Make variable names human readable AgeAtDiagnosis instead of AgeDx
-    In general data should be saved in one file per table.
-    https://github.com/jtleek/datasharing
-  
-Source Data
-  Source files - where they are, what is there 
-  Data structure
-  # Structure of source data ------------------------------------------------
-# 
-# Source data files are broken down into several broad categories:
-#   - Reference data
-#       - A list of all human activities recorded in the data
-#       - A list of all features recorded in the data
-#   - Training data
-#       - Specific human subjects included in the training data 
-#       - Specific activities recorded in the training data
-#       - Specific features recorded in the training data
-#   - Test data
-#       - Specific human subjects included in the test data 
-#       - Specific activities recorded in the test data
-#       - Specific features recorded in the test data
-  Variable labels 
-  Known issues
-    some name components duplicated
-    no key to join data together between subjects, activities, and features
+References to raw data
 
-Target Data
-  Summary measures
-  Included / Excluded values
-  Structure
-  Number of variables
-    Grouping varibles
-    Feature vribles
-  Number of rows
-  Variable naming scheme
-  Transformations
-  Known issues  
+
   
 Code Book
-  Variable Name
-  Format
-    Continuous
-    Ordinal
-    Categorical
-    Missing
-    Censored
-  unit of measure
-  Description
-  Valid Range
-  Code for Missing
-  Transformations
 
-Code to read target data
+  Variable Name | Format | Unit of Measure | Description                    | Valid Range | Code for Missing | Transformation 
+  --------------|--------|-----------------|--------------------------------|-------------|------------------|---------------
+  subjectid     | integer|       N/A       | ID for each human subject      | 1 - 30| NA | N/A
+  activitylabel | character|     N/A       | description of each activity performed   | WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING| NA | N/A 
 
+ x | Summary | Domain | Force Component | Phone Device | Jerk Motion | Time Interval Statistic | Motion Axis | Magnitude
+---|---------|--------|-----------------|--------------|-------------|-------------------------|-------------|-----------
+ Feature | Statistic | t=time; f=frequency | body; gravity | acc=accelerometer; gyro | Yes; No | mean; std = standard deviation| x; y; z | Yes; No
+meantbodyaccmeanx | mean | time  | body  | accelerometer  |  | mean | x | 
+meantbodyaccmeany | mean | time  | body  | accelerometer  |  | mean | y | 
+meantbodyaccmeanz | mean | time  | body  | accelerometer  |  | mean | z | 
+meantbodyaccstdx | mean | time  | body  | accelerometer  |  | standard deviation | x | 
+meantbodyaccstdy | mean | time  | body  | accelerometer  |  | standard deviation | y | 
+meantbodyaccstdz | mean | time  | body  | accelerometer  |  | standard deviation | z | 
+meantgravityaccmeanx | mean | time  | gravity | accelerometer  |  | mean | x | 
+meantgravityaccmeany | mean | time  | gravity | accelerometer  |  | mean | y | 
+meantgravityaccmeanz | mean | time  | gravity | accelerometer  |  | mean | z | 
+meantgravityaccstdx | mean | time  | gravity | accelerometer  |  | standard deviation | x | 
+meantgravityaccstdy | mean | time  | gravity | accelerometer  |  | standard deviation | y | 
+meantgravityaccstdz | mean | time  | gravity | accelerometer  |  | standard deviation | z | 
+meantbodyaccjerkmeanx | mean | time  | body  | accelerometer  | Yes | mean | x | 
+meantbodyaccjerkmeany | mean | time  | body  | accelerometer  | Yes | mean | y | 
+meantbodyaccjerkmeanz | mean | time  | body  | accelerometer  | Yes | mean | z | 
+meantbodyaccjerkstdx | mean | time  | body  | accelerometer  | Yes | standard deviation | x | 
+meantbodyaccjerkstdy | mean | time  | body  | accelerometer  | Yes | standard deviation | y | 
+meantbodyaccjerkstdz | mean | time  | body  | accelerometer  | Yes | standard deviation | z | 
+meantbodygyromeanx | mean | time  | body  | gyro |  | mean | x | 
+meantbodygyromeany | mean | time  | body  | gyro |  | mean | y | 
+meantbodygyromeanz | mean | time  | body  | gyro |  | mean | z | 
+meantbodygyrostdx | mean | time  | body  | gyro |  | standard deviation | x | 
+meantbodygyrostdy | mean | time  | body  | gyro |  | standard deviation | y | 
+meantbodygyrostdz | mean | time  | body  | gyro |  | standard deviation | z | 
+meantbodygyrojerkmeanx | mean | time  | body  | gyro | Yes | mean | x | 
+meantbodygyrojerkmeany | mean | time  | body  | gyro | Yes | mean | y | 
+meantbodygyrojerkmeanz | mean | time  | body  | gyro | Yes | mean | z | 
+meantbodygyrojerkstdx | mean | time  | body  | gyro | Yes | standard deviation | x | 
+meantbodygyrojerkstdy | mean | time  | body  | gyro | Yes | standard deviation | y | 
+meantbodygyrojerkstdz | mean | time  | body  | gyro | Yes | standard deviation | z | 
+meantbodyaccmagmean | mean | time  | body  | accelerometer  |  | mean |  | Yes
+meantbodyaccmagstd | mean | time  | body  | accelerometer  |  | standard deviation |  | Yes
+meantgravityaccmagmean | mean | time  | gravity | accelerometer  |  | mean |  | Yes
+meantgravityaccmagstd | mean | time  | gravity | accelerometer  |  | standard deviation |  | Yes
+meantbodyaccjerkmagmean | mean | time  | body  | accelerometer  | Yes | mean |  | Yes
+meantbodyaccjerkmagstd | mean | time  | body  | accelerometer  | Yes | standard deviation |  | Yes
+meantbodygyromagmean | mean | time  | body  | gyro |  | mean |  | Yes
+meantbodygyromagstd | mean | time  | body  | gyro |  | standard deviation |  | Yes
+meantbodygyrojerkmagmean | mean | time  | body  | gyro | Yes | mean |  | Yes
+meantbodygyrojerkmagstd | mean | time  | body  | gyro | Yes | standard deviation |  | Yes
+meanfbodyaccmeanx | mean | frequency | body  | accelerometer  |  | mean | x | 
+meanfbodyaccmeany | mean | frequency | body  | accelerometer  |  | mean | y | 
+meanfbodyaccmeanz | mean | frequency | body  | accelerometer  |  | mean | z | 
+meanfbodyaccstdx | mean | frequency | body  | accelerometer  |  | standard deviation | x | 
+meanfbodyaccstdy | mean | frequency | body  | accelerometer  |  | standard deviation | y | 
+meanfbodyaccstdz | mean | frequency | body  | accelerometer  |  | standard deviation | z | 
+meanfbodyaccjerkmeanx | mean | frequency | body  | accelerometer  | Yes | mean | x | 
+meanfbodyaccjerkmeany | mean | frequency | body  | accelerometer  | Yes | mean | y | 
+meanfbodyaccjerkmeanz | mean | frequency | body  | accelerometer  | Yes | mean | z | 
+meanfbodyaccjerkstdx | mean | frequency | body  | accelerometer  | Yes | standard deviation | x | 
+meanfbodyaccjerkstdy | mean | frequency | body  | accelerometer  | Yes | standard deviation | y | 
+meanfbodyaccjerkstdz | mean | frequency | body  | accelerometer  | Yes | standard deviation | z | 
+meanfbodygyromeanx | mean | frequency | body  | gyro |  | mean | x | 
+meanfbodygyromeany | mean | frequency | body  | gyro |  | mean | y | 
+meanfbodygyromeanz | mean | frequency | body  | gyro |  | mean | z | 
+meanfbodygyrostdx | mean | frequency | body  | gyro |  | standard deviation | x | 
+meanfbodygyrostdy | mean | frequency | body  | gyro |  | standard deviation | y | 
+meanfbodygyrostdz | mean | frequency | body  | gyro |  | standard deviation | z | 
+meanfbodyaccmagmean | mean | frequency | body  | accelerometer  |  | mean |  | Yes
+meanfbodyaccmagstd | mean | frequency | body  | accelerometer  |  | standard deviation |  | Yes
+meanfbodyaccjerkmagmean | mean | frequency | body  | accelerometer  | Yes | mean |  | Yes
+meanfbodyaccjerkmagstd | mean | frequency | body  | accelerometer  | Yes | standard deviation |  | Yes
+meanfbodygyromagmean | mean | frequency | body  | gyro |  | mean |  | Yes
+meanfbodygyromagstd | mean | frequency | body  | gyro |  | standard deviation |  | Yes
+meanfbodygyrojerkmagmean | mean | frequency | body  | gyro | Yes | mean |  | Yes
+meanfbodygyrojerkmagstd | mean | frequency | body  | gyro | Yes | standard deviation |  | Yes
 
-  
