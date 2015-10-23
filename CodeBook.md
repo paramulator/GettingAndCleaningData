@@ -2,14 +2,36 @@ This document describes the source data, the final tidy dataset, and the transfo
 
 References to raw data
 
+Tidy data
+
+Grouping variables
+
+  Variable Name | Format | Unit of Measure | Description                    | Valid Range | Code for Missing | Transformation
+  --------------|--------|-----------------|--------------------------------|-------------|------------------|---------------
+  subjectid     | integer|       N/A       | ID for each human subject      | 1 - 30| NA | N/A
+  activitylabel | character|     N/A       | description of each activity performed   | WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING| NA | N/A 
+
+Components of variable name
+
+Component | Levels | Description
+---- | --- | ---
+Summary Stat | Mean (only) | Summary statistic of feature signals computed across each combination of Subject ID and Activity
+Domain | t=time, f=frequency  | Domain component of feature signals
+Force | body, gravity | Force component of feature signals (See here for more detail on how force components were calculated)
+Device | acc=accelerometer, gyro=gyroscope | Samsung smartphone device emitting feature signals
+Jerk | Yes, No | Jerk motion included or not in feature signals 
+Interval Stat | mean, std=std. deviation | Interval statistic of feature signals calculated over moving windows of time
+Axis | x, y, z | Axis component of feature signals
+Magnitude | TRUE, FALSE | Magnitude component of feature signals calculated across all axis components.
+
+
+Feature variables
+Raw feature labels
+Translation to feature variable name
 
   
 Code Book
 
-  Variable Name | Format | Unit of Measure | Description                    | Valid Range | Code for Missing | Transformation 
-  --------------|--------|-----------------|--------------------------------|-------------|------------------|---------------
-  subjectid     | integer|       N/A       | ID for each human subject      | 1 - 30| NA | N/A
-  activitylabel | character|     N/A       | description of each activity performed   | WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING| NA | N/A 
 
 
 Feature Variable | Summary Stat: mean(only) | Domain: t=time, f=freq | Force: body, gravity | Device: acc, gyro | Jerk: Yes, No | Interval Stat: mean, std | Axis: x, y, z | Magnitude: Yes, No
