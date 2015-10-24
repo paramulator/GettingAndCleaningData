@@ -1,14 +1,13 @@
-#### CodeBook.md
-You are in the repo for the Coursera *Getting and Cleaning Data* class project.  The class project requires that the source data, which is spread across multiple individual text files, be consolidated into a single file adhering to the principles of tidy data.  This document provides references to the raw source data, and describes the final tidy dataset.  See the [README.md] () file in this repo for details on the process to generate the tidy dataset.   
+This document provides references to the raw source data, and describes the variables in the final tidy dataset.  See the [README.md] () file in this repo for details on the process to generate the tidy dataset.   
 
 ***
 
 #### Contents
 * [References] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#references)
-* [Variable Names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#variable-names)
+* [Fixing Up Variable Names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#fixing-up-variable-names)
 * [Feature Selection] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#feature-selection)
 * [Transformations] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#transformations)
-* [Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#naming-convention)
+* [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention)
 * [Output Variables] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variables)
 
 ***
@@ -18,8 +17,8 @@ For an understanding of the source data, this [link] (http://archive.ics.uci.edu
 
 ***
 
-#### Variable Names
-The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  Therefore, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] for advice given regarding what not to do with the names.  
+#### Fixing Up Variable Names
+The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable names pretty much follow the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] () for advice given regarding what not to do with the names.    
 
 Examples: 
   + Raw feature label "t**B**ody**A**cc**J**erk**-**mean**()-Z**" was converted to R variable name: "tbodyaccjerkmeanz".
@@ -49,7 +48,7 @@ Examples:
 
 ***
 
-#### Naming Convention
+#### Output Variable Naming Convention
 Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
 
 Substring in variable name | Description
