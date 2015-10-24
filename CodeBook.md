@@ -7,7 +7,7 @@ This document provides references to the raw source data, and describes the vari
 * [Fixing Up Variable Names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#fixing-up-variable-names)
 * [Feature Selection] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#feature-selection)
 * [Transformations] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#transformations)
-* [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention)
+* [Output Variable Naming Conventions] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-conventions)
 * [Output Variables] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variables)
 
 ***
@@ -18,7 +18,7 @@ For an understanding of the source data, this [link] (http://archive.ics.uci.edu
 ***
 
 #### Fixing Up Variable Names
-The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable naming convention of the output dataset pretty much follows the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] (https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for advice given regarding what not to do with the names.  In particular look in Part 6 for the sections "Should I decompose the variable names" and "A few more thoughts".  Look at [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention) in this document as well as the above references to learn how to interpret the variable names.     
+The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable naming convention of the output dataset pretty much follows the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] (https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for advice given regarding what not to do with the names.  In particular look in Part 6 for the sections "Should I decompose the variable names" and "A few more thoughts".  Look at [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-conventions) in this document as well as the above references to learn how to interpret the variable names.     
 
 Examples: 
   + Raw feature label "t**B**ody**A**cc**J**erk**-**mean**()-Z**" was converted to R variable name: "tbodyaccjerkmeanz".
@@ -48,7 +48,7 @@ Examples:
 
 ***
 
-#### Output Variable Naming Convention
+#### Output Variable Naming Conventions
 Feature variable names in the final tidy dataset are pieced together by concatenating substrings from the table below according to how each feature was defined in the raw source data.  Generally speaking, a variable name can be constructed by picking a substring from each row and concatenating them in row order.  There are slight variations to this with the magnitude variables but after looking over all the variable names in the output dataset you'll get the idea.
 
 Substring in variable name | Description
@@ -73,7 +73,7 @@ Here is the list of 68 variables contained in the final output tidy dataset.  Th
 Variable  | Type | Range | Units | Description | Missing Code | Transformation
 ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | -----------
 subjectid | Integer | 1, 2, …, 30 | N/A | Subject ID number | NA | N/A
-activitylabel | Factor | WALKING, WALKING_UPSTAIRS,  WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  | N/A | Activity label | NA | N/A
+activitylabel | Factor | WALKING, WALKING_UPSTAIRS,  WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING  | N/A | Text label describing activity performed | NA | N/A
 meantbodyaccmeanx | Numeric | [-1, 1] | g's rescaled  to range | [See Naming Conventions][1] | NA |Mean by subjectid and activitylabel
 meantbodyaccmeany | Numeric | [-1, 1] | g's rescaled  to range | [See Naming Conventions][1] | NA |Mean by subjectid and activitylabel
 meantbodyaccmeanz | Numeric | [-1, 1] | g's rescaled  to range | [See Naming Conventions][1] | NA |Mean by subjectid and activitylabel
