@@ -32,7 +32,7 @@ Examples:
 The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "mean" or "std" in their labels were kept.  Feature variables that included "meanfreq" or "angle" were dropped because these were not based on simple mean or standard deviation calculations.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.
 
 Examples:  
-  + Feature variable "tbodyaccjerk**meanz**" was kept.
+  + Feature variable "tbodyaccjerk**mean**z" was kept.
   + Feature variable "fbodygyromag**std**" was kept.
   + Feature variable "fbodyaccmagskewness" was dropped.
   + Feature variable "tgravityaccmagarcoeff3" was dropped.
@@ -45,55 +45,40 @@ The test and train data each contain a subject ID and an activity ID number.  Th
 The test and train data were joined together into one dataset.  This dataset was ordered by "subjectid" and activitylabel.  Within each of these combinations the mean value of each of the 66 features was computed.  The text string "mean" was pre-pended to each feature variable name in the final tidy dataset.
 
 Examples:
-  + Summarized feature variable "**mean**tbodyaccjerkmeanz" was created.
-  + Summarized feature variable "**mean**fbodygyromagstd" was created.
-
-***
-
-#### Attributes common to all features
-All feature variables in the final tidy dataset share the following attributes:
+  + Summary feature variable "**mean**tbodyaccjerkmeanz" was created.
+  + Summary feature variable "**mean**fbodygyromagstd" was created.
 
 ***
 
 #### Naming convention for feature variables in output tidy data set
 Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
 
-So, an example name is "mean" + ""t" + "body" + "gyro" + "jerk" + "mean" + "x" = 
-Another example is 
+Component | Levels | Description
+---- | --- | ---
+Summary Stat | Mean (only) | Summary statistic of feature computed across each combination of Subject ID and Activity
+Domain | t=time, f=frequency  | Domain component of this feature 
+Force | body, gravity | Force component of this feature
+Device | acc=accelerometer, gyro=gyroscope | Samsung smartphone device signals included in this feature 
+Jerk | jerk, "" | Is jerk motion included in this feature? 
+Interval Stat | mean, std=std. deviation | Interval statistic calculated over moving windows of time included in this feature
+Axis or Magnitude | x, y, z, mag | Axis component or magnitude included in this feature
+
+Examples:
+  + "mean" + "t" + "body" + "acc" + "jerk" + "mean" + "z" = "meantbodyaccjerkmeanz"
+  + "mean" + "f" + "body" + "gyro" + "mag" + "std" = "meanfbodygyromagstd"
 
 ***
 
 #### Table of specific variables in the output tidy dataset
 
-Grouping variables
+##### Grouping variables
 
   Variable Name | Format | Unit of Measure | Description                    | Valid Range | Code for Missing | Transformation
   --------------|--------|-----------------|--------------------------------|-------------|------------------|---------------
-  subjectid     | integer|       N/A       | ID for each human subject      | 1 - 30| NA | N/A
-  activitylabel | character|     N/A       | description of each activity performed   | WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING| NA | N/A 
+  subjectid     | integer|       N/A       | ID number for each human subject      | 1 - 30| NA | N/A
+  activitylabel | character|     N/A       | Text description of each activity performed   | WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING| NA | N/A 
 
-Components of variable name
-
-Component | Levels | Description
----- | --- | ---
-Summary Stat | Mean (only) | Summary statistic of feature signals computed across each combination of Subject ID and Activity
-Domain | t=time, f=frequency  | Domain component of feature signals
-Force | body, gravity | Force component of feature signals (See here for more detail on how force components were calculated)
-Device | acc=accelerometer, gyro=gyroscope | Samsung smartphone device emitting feature signals
-Jerk | Yes, No | Jerk motion included or not in feature signals 
-Interval Stat | mean, std=std. deviation | Interval statistic of feature signals calculated over moving windows of time
-Axis | x, y, z | Axis component of feature signals
-Magnitude | TRUE, FALSE | Magnitude component of feature signals calculated across all axis components.
-
-
-Feature variables
-Raw feature labels
-Translation to feature variable name
-
-  
-Code Book
-
-
+##### Feature Variables
 
 Feature Variable | Summary Stat: mean(only) | Domain: t=time, f=freq | Force: body, gravity | Device: acc, gyro | Jerk: Yes, No | Interval Stat: mean, std | Axis: x, y, z | Magnitude: Yes, No
 ----------- | --------- | ----------- | ------------ | ----------- | --------- | ----------- | ------------ | -----------
