@@ -32,25 +32,26 @@
 # more efficient because unnecessary columns are dropped before "train" and 
 # "test" are concatenated thus reducing storage requirements. 
 # 
-# Step 0.  Prepare source file pointers and download data (if needed).
-# Step 1.  Read the reference data files and produce individual dataframes for 
+# Step 1.  Prepare source file pointers and download data (if needed).
+# Step 2.  Read the reference data files and produce individual dataframes for 
 #          each.  As needed, a number of improvements are made to the "features" 
 #          dataframe so that feature labels contained in the dataframe
 #          can be used as proper R variable names that adhere to tidy
 #          data principles.  The details are outlined below in the code.
-# Step 2.  Read the training data and produce a training dataframe that adheres
+# Step 3.  Read the training data and produce a training dataframe that adheres
 #          to the principles of tidy data.  This step leverages the "features"
 #          reference dataframe to construct meaningful column names.  It also
 #          references the "activities" dataframe to give meaningful labels
 #          to raw human activitiy IDs.  Read the test data and produce a second 
 #          dataframe, using the same methods.
-# Step 3.  Once the training and test dataframes are constructed, concatenate 
+# Step 4.  Once the training and test dataframes are constructed, concatenate 
 #          these together to form a single, longer dataframe.
-# Step 4.  Group the concatenated data by human subject id and activity label, 
+# Step 5.  Group the concatenated data by human subject id and activity label, 
 #          and summarize it by finding the mean of each feature variable within 
 #          each subject and activity combination.
-# Step 5.  Export the summarized data to a text file in the current working 
+# Step 6.  Export the summarized data to a text file in the current working 
 #          directory.
+# Step 7.  Optionally read the exported text file back in and view it.
 #===============================================================================
 
 
@@ -118,7 +119,7 @@ buildDataSet <- function(subFile, actFile, featFile, actXref, featXref){
     features <- read.table(featFile, colClasses = "numeric",
                          col.names = featXref$featureVar) %>%  # Get tidy names.
         select(matches("(mean){1}|(std){1}"), 
-               -matches("(meanFreq)|(angle)"))
+               -matches("(meanfreq)|(angle)"))
     print("Features processed: rows, columns")
     print(dim(features))
     
@@ -138,7 +139,7 @@ buildDataSet <- function(subFile, actFile, featFile, actXref, featXref){
 
 # M A I N   P R O G R A M ------------------------------------------------------
 
-# Step 0. File/folder pointers and source data ---------------------------------
+# Step 1. File/folder pointers and source data ---------------------------------
 
 # Source and local zip files.
 externalZipURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -180,7 +181,7 @@ if (!file.exists(rootFolder)) {
     file.remove(localZipFile)
 }
 
-# Step 1. Process the reference data; Integer ID variables improve sorting.
+# Step 2. Process the reference data; Integer ID variables improve sorting. ----
 activitiesXref <- read.table(activityFile, 
                              colClasses = c("integer", "factor"),
                              col.names = c("activityid", "activitylabel"))
@@ -190,16 +191,16 @@ featuresXref <- read.table(featuresFile,
                            col.names = c("featureid", "featurelabel")) %>%
     mutate(featureVar = makeTidyNames(featurelabel))  # Tidy variable names.
 
-# Step 2. Process the train and test data --------------------------------------
+# Step 3. Process the train and test data --------------------------------------
 trainDataSet <- buildDataSet(trainSubjectFile, trainActivityFile, 
                              trainFeatureFile, activitiesXref, featuresXref)
 testDataSet <- buildDataSet(testSubjectFile, testActivityFile, 
                             testFeatureFile, activitiesXref, featuresXref)
 
-# Step 3. Merge the train and test data ----------------------------------------
+# Step 4. Merge the train and test data ----------------------------------------
 mergedDataSet <- bind_rows(trainDataSet, testDataSet) 
 
-# Step 4. Summarize the concatenated data; Prepend "mean" to features ----------
+# Step 5. Summarize the concatenated data; Prepend "mean" to features ----------
 summaryDataSet <- mergedDataSet %>%
     group_by(subjectid, activitylabel) %>%
     summarize_each(funs(mean)) %>%
@@ -208,7 +209,7 @@ summaryDataSet <- mergedDataSet %>%
     #  names with "mean".
     setNames(c(names(.)[1:2], paste0("mean", names(.)[3:68])))
     
-# Step 5. Export summary data to text file -------------------------------------
+# Step 6. Export summary data to text file -------------------------------------
 print(exportFile)
 exportCon <- file(exportFile, open = "w+")
 write.table(summaryDataSet, exportCon, row.names = FALSE)
@@ -218,11 +219,12 @@ close(exportCon)
 
 
 
-# Uncomment to recreate exported dataframe:
-# testFrame <- read.table(exportFile, header = TRUE)
-# dim(testFrame)
-# str(testFrame)
-# summary(testFrame)
+# Step 7. Uncomment to recreate exported dataframe -----------------------------
+testFrame <- read.table(exportFile, header = TRUE)
+dim(testFrame)
+str(testFrame)
+summary(testFrame)
+View(testFrame)
 
 
 
