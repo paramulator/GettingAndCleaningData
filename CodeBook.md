@@ -1,4 +1,4 @@
-This document provides references to the raw source data, and describes the variables in the final tidy dataset.  See the [README.md] () file in this repo for details on the process to generate the tidy dataset.   
+This document provides references to the raw source data, and describes the variables in the final tidy dataset.  See the [README.md] (https://github.com/paramulator/GettingAndCleaningData/blob/master/README.md) file in this repo for details on the process to generate the tidy dataset.   
 
 ***
 
@@ -18,7 +18,7 @@ For an understanding of the source data, this [link] (http://archive.ics.uci.edu
 ***
 
 #### Fixing Up Variable Names
-The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable names pretty much follow the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] () for advice given regarding what not to do with the names.    
+The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable names pretty much follow the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] (https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for advice given regarding what not to do with the names.  In particular look in Part 6 for the sections "Should I decompose the variable names" and "A few more thoughts".  Look at [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention) in this document as well as the above references to learn how to interpret the variable names.     
 
 Examples: 
   + Raw feature label "t**B**ody**A**cc**J**erk**-**mean**()-Z**" was converted to R variable name: "tbodyaccjerkmeanz".
@@ -27,7 +27,7 @@ Examples:
 ***
 
 #### Feature Selection
-The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "mean" or "std" in their labels were kept.  Feature variables that included "meanfreq" or "angle" were dropped because these were not based on simple mean or standard deviation calculations.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.
+The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "mean" or "std" in their labels were kept.  Feature variables that included "meanfreq" or "angle" were dropped because these were not based on the same mean or standard deviation calculations used for the other kept features.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.
 
 Examples:  
   + Feature variable "tbodyaccjerk**mean**z" was kept.
@@ -38,7 +38,7 @@ Examples:
 ***
 
 #### Transformations
-The test and train data each contain a subject ID and an activity ID number.  The activity ID number was used to pick up the descriptive "activitylabel" text string from the activities reference dataframe.  The final tidy dataset includes "subjectid" and "activitylabel" on each row of data and drops the activity ID.
+The test and train data each contain a subject ID and activity ID numbers.  The activity ID number was used to pick up the descriptive "activitylabel" text string from the activities reference dataframe.  The final tidy dataset includes "subjectid" and "activitylabel" on each row of data and drops the activity ID.
 
 The test and train data were joined together into one dataset.  This dataset was ordered by "subjectid" and activitylabel.  Within each of these combinations the mean value of each of the 66 features was computed.  The text string "mean" was pre-pended to each feature variable name in the final tidy dataset.
 
@@ -49,17 +49,17 @@ Examples:
 ***
 
 #### Output Variable Naming Convention
-Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
+Feature variable names in the final tidy dataset are pieced together by concatenating substrings from the table below according to how each feature was defined in the raw source data.  Generally speaking, a variable name can be constructed by picking a substring from each row and concatenating them in row order.  There are slight variations to this with the magnitude variables but after looking over all the variable names in the output dataset you'll get the idea.
 
 Substring in variable name | Description
 --- | ---
-"mean" | Summary statistic of feature computed across each combination of Subject ID and Activity.  Only the mean is available.
-"t", "f"  | Domain component of this feature: t=time, f=frequency 
-"body", "gravity" | Force component of this feature
-"acc", "gyro" | Samsung smartphone device signals included in this feature: acc=accelerometer, gyro=gyroscope
+"mean" | Summary statistic of the feature computed across each combination of Subject ID and Activity.  Only the mean is available.  Every feature variable in the output tidy dataset begins with "mean".
+"t", "f"  | Domain component of this feature: t=time, f=frequency. 
+"body", "gravity" | Force component of this feature.
+"acc", "gyro" | Samsung smartphone device signals included in this feature: acc=accelerometer, gyro=gyroscope.
 "jerk", "" | Is jerk motion included in this feature? 
 "mean", "std" | Interval statistic calculated over moving windows of time included in this feature: mean=mean, std=std. deviation
-"x", "y", "z", "mag" | Axis component or magnitude included in this feature: x=x-axis, y=y-axis, z=z-axis, mag=magnitude
+"x", "y", "z", "mag" | Axis component or magnitude included in this feature: x=x-axis, y=y-axis, z=z-axis, or mag=magnitude.
 
 Examples:
   + "mean" + "t" + "body" + "acc" + "jerk" + "mean" + "z" = "meantbodyaccjerkmeanz"
@@ -68,6 +68,7 @@ Examples:
 ***
 
 #### Output Variables
+Here is the final list of variables contained in the final output tidy dataset.  They are listed here in the order in which they appear in the data.
 
 Variable Name | Type | Valid Range | Units of Measure | Description | Code for Missing | Transformation
 ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | -----------
@@ -139,3 +140,7 @@ meanfbodygyromagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | 
 meanfbodygyromagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
 meanfbodygyrojerkmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
 meanfbodygyrojerkmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
+
+$1 g = 9.8 meters per sec^2$
+
+$rad/sec = radians per second$
