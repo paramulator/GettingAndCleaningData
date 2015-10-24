@@ -18,7 +18,7 @@ For an understanding of the source data, this [link] (http://archive.ics.uci.edu
 ***
 
 #### Fixing Up Variable Names
-The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable names pretty much follow the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] (https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for advice given regarding what not to do with the names.  In particular look in Part 6 for the sections "Should I decompose the variable names" and "A few more thoughts".  Look at [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention) in this document as well as the above references to learn how to interpret the variable names.     
+The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  While the variable naming convention of the output dataset pretty much follows the conventions of the feature labels, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] (https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/) for advice given regarding what not to do with the names.  In particular look in Part 6 for the sections "Should I decompose the variable names" and "A few more thoughts".  Look at [Output Variable Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention) in this document as well as the above references to learn how to interpret the variable names.     
 
 Examples: 
   + Raw feature label "t**B**ody**A**cc**J**erk**-**mean**()-Z**" was converted to R variable name: "tbodyaccjerkmeanz".
@@ -68,7 +68,7 @@ Examples:
 ***
 
 #### Output Variables
-Here is the final list of variables contained in the final output tidy dataset.  They are listed here in the order in which they appear in the data.
+Here is the list of 68 variables contained in the final output tidy dataset.  They are listed here in the order in which they appear in the data.
 
 Variable  | Type | Range | Units | Description | Missing Code | Transformation
 ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | -----------
