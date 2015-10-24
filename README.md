@@ -39,8 +39,7 @@ The script is in this depo but you can find it [here]       (https://github.com/
 ##### Inputs
 There are no parameterized inputs to the script.  Instead, all references to external data sources and locally downloaded directories and files are hard-coded. 
 
-The script will automatically download the raw source data from this location as needed:
-    + https<span></span>//d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The script will automatically download the raw source data from this location as needed:                 https<span></span>//d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The downloaded data is placed in the UCI folder.  The structure of the folder and relevant input/output files is as follows:
 
