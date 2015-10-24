@@ -4,12 +4,12 @@ You are in the repo for the Coursera *Getting and Cleaning Data* class project. 
 ***
 
 #### Contents
-* [References to source data] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#references)
-* [Converting feature labels to valid R variable names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#variable-names)
-* [Selection of specific features] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#feature-selection)
+* [References] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#references)
+* [Variable Names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#variable-names)
+* [Feature Selection] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#feature-selection)
 * [Transformations] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#transformations)
-* [Naming convention for features in output tidy dataset] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#naming-convention)
-* [Specific variables in the output tidy dataset] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variables)
+* [Naming Convention] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#naming-convention)
+* [Output Variables] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variables)
 
 ***
 
@@ -49,7 +49,7 @@ Examples:
 
 ***
 
-#### Naming Conventions
+#### Naming Convention
 Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
 
 Component | Levels | Description
