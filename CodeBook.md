@@ -52,15 +52,15 @@ Examples:
 #### Naming Convention
 Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
 
-Component | Levels | Description
----- | --- | ---
-Summary Stat | Mean (only) | Summary statistic of feature computed across each combination of Subject ID and Activity
-Domain | t=time, f=frequency  | Domain component of this feature 
-Force | body, gravity | Force component of this feature
-Device | acc=accelerometer, gyro=gyroscope | Samsung smartphone device signals included in this feature 
-Jerk | jerk, "" | Is jerk motion included in this feature? 
-Interval Stat | mean, std=std. deviation | Interval statistic calculated over moving windows of time included in this feature
-Axis or Magnitude | x, y, z, mag | Axis component or magnitude included in this feature
+Substring in variable name | Description
+--- | ---
+"mean" | Summary statistic of feature computed across each combination of Subject ID and Activity.  Only the mean is available.
+"t", "f"  | Domain component of this feature: t=time, f=frequency 
+"body", "gravity" | Force component of this feature
+"acc", "gyro" | Samsung smartphone device signals included in this feature: acc=accelerometer, gyro=gyroscope
+"jerk", "" | Is jerk motion included in this feature? 
+"mean", "std" | Interval statistic calculated over moving windows of time included in this feature: mean=mean, std=std. deviation
+"x", "y", "z", "mag" | Axis component or magnitude included in this feature: x=x-axis, y=y-axis, z=z-axis, mag=magnitude
 
 Examples:
   + "mean" + "t" + "body" + "acc" + "jerk" + "mean" + "z" = "meantbodyaccjerkmeanz"
