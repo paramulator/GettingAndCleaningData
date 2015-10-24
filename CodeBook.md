@@ -4,22 +4,21 @@ You are in the repo for the Coursera *Getting and Cleaning Data* class project. 
 ***
 
 #### Contents
-* [References to source data] ()
-* Converting feature labels to valid R variable names
-* Selection of specific features
-* Transformations
-* Attributes common to all transformed features
-* Naming convention for variables in output tidy dataset 
-* Tables of specific variables in the output tidy dataset
+* [References to source data] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#references)
+* [Converting feature labels to valid R variable names] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#variable-names)
+* [Selection of specific features] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#feature-selection)
+* [Transformations] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#transformations)
+* [Naming convention for features in output tidy dataset] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#naming-convention)
+* [Specific variables in the output tidy dataset] (https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variables)
 
 ***
 
-#### References to source data
+#### References
 For an understanding of the source data, this [link] (http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) describes it in a bit more detail than does the Coursera project link.  In addition, look at the [features_info.txt] (https://github.com/paramulator/GettingAndCleaningData/blob/master/UCI%20HAR%20Dataset/features_info.txt) file contained in this repo for a deeper discussion of individual feature calculations.
 
 ***
 
-#### Converting feature labels to valid R variable names
+#### Variable Names
 The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  Therefore, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] for advice given regarding what not to do with the names.  
 
 Examples: 
@@ -28,7 +27,7 @@ Examples:
 
 ***
 
-#### Selection of specific features
+#### Feature Selection
 The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "mean" or "std" in their labels were kept.  Feature variables that included "meanfreq" or "angle" were dropped because these were not based on simple mean or standard deviation calculations.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.
 
 Examples:  
@@ -50,7 +49,7 @@ Examples:
 
 ***
 
-#### Naming convention for feature variables in output tidy data set
+#### Naming Conventions
 Feature variable names in the final tidy dataset are pieced together by concatenating strings from this table according to what was measured, which device was used, which axis was recorded, etc.
 
 Component | Levels | Description
@@ -69,7 +68,7 @@ Examples:
 
 ***
 
-#### Table of specific variables in the output tidy dataset
+#### Output Variables
 
 Variable Name | Type | Valid Range | Units of Measure | Description | Code for Missing | Transformation
 ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | -----------
