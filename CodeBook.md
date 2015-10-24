@@ -1,6 +1,5 @@
 #### CodeBook.md
-
-You are in the repo for the Coursera *Getting and Cleaning Data* class project.  The class project requires that the source data, which is spread across multiple individual text files, be consolidated into a single file adhering to the principles of tidy data.  This document provides references to the source data, and describes the final tidy dataset.   
+You are in the repo for the Coursera *Getting and Cleaning Data* class project.  The class project requires that the source data, which is spread across multiple individual text files, be consolidated into a single file adhering to the principles of tidy data.  This document provides references to the raw source data, and describes the final tidy dataset.  See the [README.md] () file in this repo for details on the process to generate the tidy dataset.   
 
 ***
 
@@ -16,27 +15,39 @@ You are in the repo for the Coursera *Getting and Cleaning Data* class project. 
 ***
 
 #### References to source data
-Begin by developing an understanding of the source data.  This [link] (http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) describes the data in a bit more detail than does the Coursera project link.  In addition, look at the [features_info.txt] (https://github.com/paramulator/GettingAndCleaningData/blob/master/UCI%20HAR%20Dataset/features_info.txt) file contained in this repo for a deeper discussion of individual feature calculations.
+For an understanding of the source data, this [link] (http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions) describes it in a bit more detail than does the Coursera project link.  In addition, look at the [features_info.txt] (https://github.com/paramulator/GettingAndCleaningData/blob/master/UCI%20HAR%20Dataset/features_info.txt) file contained in this repo for a deeper discussion of individual feature calculations.
 
 ***
 
 #### Converting feature labels to valid R variable names
-Features were given descriptive character strings that on their own could not be used as valid R variable names.  Therefore, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] for advice given regarding what not to do with the names.  
+The raw data contains a listing of "features" that were recorded during the experiments.  These features form the basis for column labels that will be used in the final tidy dataset.  The features were given descriptive character strings that on their own could not be used as valid R variable names.  Therefore, some transformations were applied to (1) remove special characters, (2) reduce everything to lower case, (3) eliminate spaces and (4) remove any duplicate occurances of "body" from the name.  The resulting names are long and they certainly are not pretty, but see [here] for advice given regarding what not to do with the names.  
 
 Examples: 
-  + Feature label "tBodyAccJerk-mean()-Z" was converted to variable name: "tbodyaccjerkmeanz".
-  + Feature label "fBodyBodyGyroMag-std()" was converted to variable name "fbodygyromagstd".
+  + Raw feature label "t**B**ody**A**cc**J**erk**-**mean**()-Z**" was converted to R variable name: "tbodyaccjerkmeanz".
+  + Raw feature label "f**B**ody**B**ody**G**yro**M**ag**-**std**()**" was converted to R variable name "fbodygyromagstd".
 
 ***
 
 #### Selection of specific features
-The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "" or "" in their labels were kept.  Feature variables that included "" or "" were dropped.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.  In addition to features, the subjectid and activitylabel variables were also kept.  
+The assignment calls for keeping only those variables that represent time interval means and standard deviations of feature data collected for each subject and activity combination.  Feature variables that included "mean" or "std" in their labels were kept.  Feature variables that included "meanfreq" or "angle" were dropped because these were not based on simple mean or standard deviation calculations.  All other feature variables were dropped as well.  The result is a set of 66 feature variables.
+
+Examples:  
+  + Feature variable "tbodyaccjerk**meanz**" was kept.
+  + Feature variable "fbodygyromag**std**" was kept.
+  + Feature variable "fbodyaccmagskewness" was dropped.
+  + Feature variable "tgravityaccmagarcoeff3" was dropped.
+
 ***
 
 #### Transformations
-The test and train data contain an activity ID number.  This number was used to pick up the associated "activitylabel" text string from the activities reference dataframe.  The final tidy dataset includes "activitylabel" on each row of data and drops the activity ID.
+The test and train data each contain a subject ID and an activity ID number.  The activity ID number was used to pick up the descriptive "activitylabel" text string from the activities reference dataframe.  The final tidy dataset includes "subjectid" and "activitylabel" on each row of data and drops the activity ID.
 
-The test and train data were joined together into one dataset.  This dataset was ordered by "subjectid" and activitylabel.  Within each of these combinations the mean value of each of the 66 features was computed.  The text string "mean" was pre-pended to each feature variable name in the final tidy dataset.  
+The test and train data were joined together into one dataset.  This dataset was ordered by "subjectid" and activitylabel.  Within each of these combinations the mean value of each of the 66 features was computed.  The text string "mean" was pre-pended to each feature variable name in the final tidy dataset.
+
+Examples:
+  + Summarized feature variable "**mean**tbodyaccjerkmeanz" was created.
+  + Summarized feature variable "**mean**fbodygyromagstd" was created.
+
 ***
 
 #### Attributes common to all features
