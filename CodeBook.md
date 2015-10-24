@@ -3,8 +3,8 @@ You are in the repo for the Coursera *Getting and Cleaning Data* class project. 
 
 ***
 
-#### Contents of this document
-* References to source data
+#### Contents
+* [References to source data] ()
 * Converting feature labels to valid R variable names
 * Selection of specific features
 * Transformations
