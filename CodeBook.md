@@ -70,77 +70,80 @@ Examples:
 #### Output Variables
 Here is the final list of variables contained in the final output tidy dataset.  They are listed here in the order in which they appear in the data.
 
-Variable Name | Type | Valid Range | Units of Measure | Description | Code for Missing | Transformation
+Variable  | Type | Range | Units | Description | Missing Code | Transformation
 ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | -----------
 subjectid | Integer | 1, 2, …, 30 | N/A | Subject ID number | NA | N/A
 activitylabel | Factor |  | N/A | Activity label | NA | N/A
-meantbodyaccmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodygyromeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyromeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyromeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrostdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrostdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrostdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodyaccmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantgravityaccmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodyaccjerkmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meantbodygyromagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyromagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meantbodygyrojerkmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodyaccmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkmeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkmeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkmeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkstdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkstdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkstdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodygyromeanx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyromeany | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyromeanz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyrostdx | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyrostdy | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyrostdz | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodyaccmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodyaccjerkmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | g's rescaled  to valid range
-meanfbodygyromagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyromagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyrojerkmagmean | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
-meanfbodygyrojerkmagstd | Numeric | [-1, 1] | Unitless | See naming conventions  | NA | rad/sec rescaled to valid range
+meantbodyaccmeanx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccmeany | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccmeanz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccstdx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccstdy | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccstdz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccmeanx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccmeany | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccmeanz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccstdx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccstdy | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccstdz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkmeanx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkmeany | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkmeanz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkstdx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkstdy | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkstdz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyromeanx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyromeany | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyromeanz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrostdx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrostdy | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrostdz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkmeanx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkmeany | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkmeanz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkstdx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkstdy | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkstdz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccmagmean | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccmagstd | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccmagmean | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantgravityaccmagstd | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkmagmean | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodyaccjerkmagstd | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyromagmean | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyromagstd | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkmagmean | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meantbodygyrojerkmagstd | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccmeanx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccmeany | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccmeanz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccstdx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccstdy | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccstdz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkmeanx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkmeany | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkmeanz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkstdx | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkstdy | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkstdz | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyromeanx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyromeany | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyromeanz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyrostdx | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyrostdy | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyrostdz | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccmagmean | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccmagstd | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkmagmean | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodyaccjerkmagstd | Numeric | [-1, 1] | g's rescaled  to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyromagmean | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyromagstd | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyrojerkmagmean | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
+meanfbodygyrojerkmagstd | Numeric | [-1, 1] | rad/sec rescaled to range | [Naming Conventions][1] | NA |Mean by subjectid and activitylabel
 
-$1 g = 9.8 meters per sec^2$
 
-$rad/sec = radians per second$
+1 g = 9.8 meters per second per second
+
+rad/sec = radians per second
+
+[1]: https://github.com/paramulator/GettingAndCleaningData/blob/master/CodeBook.md#output-variable-naming-convention
